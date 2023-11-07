@@ -1,59 +1,36 @@
 package calculator;
-// import calculator.App;
 
-
-import org.junit.Test;
+import org.junit.After;
 import org.junit.Assert;
-// import org.junit.Before;
-/**
- * Unit test for simple App.
- */
+import org.junit.Before;
+import org.junit.Test;
+
 public class MainTest {
-    /**
-     * Rigorous Test :-)
-     */
 
-    App cal = new App();
     @Test
-    public void testAddPositive() {
-        App cal = new App();
-        double a = 2;
-        double b = 3;
-        double expectedResult = 5;
-        double result = cal.add(a, b);
-        Assert.assertEquals(expectedResult, result, 0.001); // Adding a delta for double comparison
+    public void power() {
+        int expectedAnswer = 32;
+        int base = 2;
+        int power = 5;
+        int answer = Main.power(2, 5);
+        Assert.assertEquals(answer, expectedAnswer);
     }
 
     @Test
-    public void testAddNegative() {
-        App cal = new App();
-        double a = 1;
-        double b = 2;
-        double expectedResult = 0;
-        double result = cal.add(a, b);
-        Assert.assertNotEquals(expectedResult, result, 0.001); // Adding a delta for double comparison
+    public void nCr() {
+        int expectedAnswer = 10;
+        int n = 5;
+        int r = 2;
+        int answer = Main.nCr(n, r);
+        Assert.assertEquals(answer, expectedAnswer);
     }
 
     @Test
-    public void testNaturalLog() {
-        double A = 1;
-        double naturalLog = 0;
-        double result = App.naturalLog(A);
-        Assert.assertEquals(naturalLog, result, 0);
-    }
-    @Test
-    public void testPower() {
-        double A = 5;
-        double B = 2;
-        double power = 25;
-        double result = App.power(A,B);
-        Assert.assertEquals(power, result, 0);
-    }
-    @Test
-    public void testSquareRoot() {
-        double A = 9;
-        double squareRoot = 3;
-        double result = App.squareRoot(A);
-        Assert.assertEquals(squareRoot, result, 0);
+    public void gcd() {
+        int expectedAnswer = 5;
+        int a = 10;
+        int b = 15;
+        int answer = Main.gcd(a, b);
+        Assert.assertEquals(answer, expectedAnswer);
     }
 }
